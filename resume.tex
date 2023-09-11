@@ -1,12 +1,13 @@
 \documentclass{resume} % Use the custom resume.cls style
 
 \usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Sean Li-Shin Ho} % Your name
 % You can merge both of these into a single line, if you do not have a website.
-\address{+1(123) 456-7890 \\ San Francisco, CA} 
-\address{\href{mailto:sean.li.shin.ho@gmail.com}{sean.li.shin.ho@gmail.com} \\ \href{https://blog.clam.moe}{blog.clam.moe} \\ \href{sean.li.shin.ho@gmail.com}{sean.li.shin.ho@gmail.com}}  %
+%\address{+1(123) 456-7890 \\ San Francisco, CA}
+\address{+886 975314108 \\ Taoyuan, TW}
+\address{\href{mailto:sean.li.shin.ho@gmail.com}{sean.li.shin.ho@gmail.com} \\ \href{https://blog.clam.tw}{blog.clam.tw} \\ \href{sean.li.shin.ho@gmail.com}{sean.li.shin.ho@gmail.com}}  %
 
 \begin{document}
 
@@ -16,7 +17,7 @@
 
 \begin{rSection}{OBJECTIVE}
 
-	{Graduated from Master of EarthScience, NCKU.  With 2+ years of experience in System Administrators/System Operators/SRE, seeking full-time SRE roles.}
+	{Graduated from Master of EarthScience, NCKU\@.  With 2+ years of experience in System Administrators/System Operators/SRE, seeking full-time DevOps/SRE roles.}
 
 
 \end{rSection}
@@ -27,7 +28,7 @@
 \begin{rSection}{Education}
 
 {\bf Master of Earth Science}, National Cheng Kung University \hfill {2019 - 2022}\\
-Relevant Coursework: A, B, C, and D.
+Relevant Coursework: Observational Seismology, Programming and Data Processing for EarthScience
 
 {\bf Bachelor of Earth Science}, National Cheng Kung University \hfill {2015 - 2019}
 %Minor in Linguistics \smallskip \\
@@ -38,69 +39,101 @@ Relevant Coursework: A, B, C, and D.
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-% TECHINICAL STRENGTHS	
+% TECHINICAL STRENGTHS
 %----------------------------------------------------------------------------------------
 \begin{rSection}{SKILLS}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Technical Skills & Linux, Python, Docker, FreeBSD, CI/CD
+Technical Skills & Linux, Python, Shell Script, Docker, FreeBSD, CI/CD
 \\
 Soft Skills & Leadership, Communication\\
 %XYZ & A, B, C, D\\
+Programming Languages & Python, MATLAB, C/C++, JavaScript, SQL \\
+Web Development & Nginx, Flask, Node.js, HTML5, CSS, jQuery, React\\
+Cloud Infra \& DevOps & Proxmox VE, Docker, Gitlab CI, GitHub Action, Grafana, Librenms \\
+Tools & Git, Unix shell, LaTeX, Vim, Scipy, Numpy, Pandas \\
+Cartography Software & GMT, QGIS, Matplotlib \\
 \end{tabular}\\
 \end{rSection}
-
-\begin{rSection}{EXPERIENCE}
-
-\textbf{Role Name} \hfill Jan 2017 - Jan 2019\\
-Company Name \hfill \textit{San Francisco, CA}
- \begin{itemize}
-    \itemsep -3pt {} 
-     \item Achieved X\% growth for XYZ using A, B, and C skills.
-     \item Led XYZ which led to X\% of improvement in ABC
-    \item Developed XYZ that did A, B, and C using X, Y, and Z. 
- \end{itemize}
- 
-%\textbf{Role Name} \hfill Jan 2017 - Jan 2019\\
-%Company Name \hfill \textit{San Francisco, CA}
-% \begin{itemize}
-%    \itemsep -3pt {} 
-%     \item Achieved X\% growth for XYZ using A, B, and C skills.
-%     \item Led XYZ which led to X\% of improvement in ABC
-%    \item Developed XYZ that did A, B, and C using X, Y, and Z. 
-% \end{itemize}
-
-\end{rSection} 
-
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
+\begin{rSection}{EXPERIENCE}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Seismology Lab, NCKU}{Jul 2018-Aug 2022}{Research Assistant}{Taiwan}
+\item Applying GPS processing result in GIS software for figuring out the relationship between Fault and Soil liquefaction.
+\item Developing a seismic data procedure applying to the research.
+\item Applyed Python and GMT to visualize the data.
+\item Developed a python web application for visualizing the data: \href{https://beachball.clam.moe}{Visualized Focal Mechenism}, to promote Earth science knowledge with web development skills.
+\item Used trained model (RED-PAN) to automatically detect micro earthquake event and use relocation methods to figure out relationship between earthquake events.
+\item Improved earthquake localization quality through non-linear and relative localization algorithms
+\end{rSubsection}
+
+%------------------------------------------------
+
+%\textbf{Role Name} \hfill Jan 2017 - Jan 2019\\
+%Company Name \hfill \textit{San Francisco, CA}
+% \begin{itemize}
+%    \itemsep -3pt {}
+%     \item Achieved X\% growth for XYZ using A, B, and C skills.
+%     \item Led XYZ which led to X\% of improvement in ABC
+%    \item Developed XYZ that did A, B, and C using X, Y, and Z.
+% \end{itemize}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Leadership}
+
+
+\begin{rSubsection}{Campus Computer \& Network Society at NCKU}{Jul 2018-Jul 2020}{Director and Sysadmin}{}
+\item Assisted in configuring, maintaining and upgrading a multi-node virtual machine cluster capable of running 60 to 80 virtual machines, using Proxmox Virtual Environment, an open-source and scalable solution for enterprise.
+\item  Established and managed the public mirror for a Linux distribution in NCKU, offering high-speed download services for open-source software packages on campus, improving the effience of developing and deployment of services.
+\item Develop and Maintain Bullitin Board System (BBS) for the club: \href{https://term.ccns.cc}{DreamBBS}, serving NCKU students and alumni for the past 27 years, and presented a lecture at the SITCON 2018, and COSCUP 2023.
+\item Deployed GitHub Actions for the club's website and BBS, to automate the deployment process and testing procedure.
+\end{rSubsection}
+
+
+\end{rSection}
+
+%------------------------------------------------
+
+\pagebreak
+
 \begin{rSection}{PROJECTS}
-\vspace{-1.25em}
-\item \textbf{Hiring Search Tool.} {Built a tool to search for Hiring Managers and Recruiters by using ReactJS, NodeJS, Firebase and boolean queries. Over 25000 people have used it so far, with 5000+ queries being saved and shared, and search results even better than LinkedIn! \href{https://hiring-search.careerflow.ai/}{(Try it here)}}
-\item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C. This project's description spans two lines and also won an award.}
-\item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C. This project's description spans two lines and also won an award.}
-\end{rSection} 
+%\vspace{-1.25em}
 
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Extra-Curricular Activities} 
-\begin{itemize}
-    \item 	Actively write \href{https://www.faangpath.com/blog/}{blog posts} and social media posts (\href{https://www.tiktok.com/@faangpath}{TikTok}, \href{https://www.instagram.com/faangpath/?hl=en}{Instagram}) viewed by over 20K+ job seekers per week to help people with best practices to land their dream jobs. 
-    \item	Sample bullet point.
-\end{itemize}
+%\begin{rSubsection}{CCNS Anime (React, video.js)}{}{}{}
+%\item Designed and developed frontend of anime streaming service using React, Redux, and video.js
+%\end{rSubsection}
 
-
+\begin{rSubsection}{Master Thesis: Investigating Crustal Structures Offshore Tainan through Regional Seismic Signals}{}{}{}
+\item Utilized machine learning for waveform picking to identify seismic events with double the accuracy.
+\item Improved earthquake localization quality through non-linear and relative localization algorithms. Online seismic source mechanism determination.
+\end{rSubsection}
+%% 
+%% 
+\begin{rSubsection}{Online Seismic Source Mechanism Determination}{}{}{}
+\item GitHub Repository: \href{https://github.com/sean0921/simplemeca-flask}{sean0921/simplemeca-flask}
+\item Developed a Python web service by combining Earth science knowledge with web development skills.
+\item Utilized containerization technology for deployment on the Heroku cloud platform, reducing on-site maintenance costs.
+\end{rSubsection}
+%% 
+\begin{rSubsection}{CCNS DreamBBS Project}{}{}{}
+\item serving NCKU students and alumni for the past 27 years
+\end{rSubsection}
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Leadership} 
-\begin{itemize}
-    \item Admin for the \href{https://discord.com/invite/WWbjEaZ}{FAANGPath Discord community} with over 6000+ job seekers and industry mentors. Actively involved in facilitating online events, career conversations, and more alongside other admins and a team of volunteer moderators! 
-\end{itemize}
-
-
-\end{rSection}
-
+%%----------------------------------------------------------------------------------------
+%\begin{rSection}{Extra-Curricular Activities}
+%\begin{itemize}
+%    \item 	Actively write \href{https://www.faangpath.com/blog/}{blog posts} and social media posts (\href{https://www.tiktok.com/@faangpath}{TikTok}, \href{https://www.instagram.com/faangpath/?hl=en}{Instagram}) viewed by over 20K+ job seekers per week to help people with best practices to land their dream jobs.
+%    \item	Sample bullet point.
+%\end{itemize}
+%\end{rSection}
 
 \end{document}
